@@ -50,6 +50,7 @@ counter = 0;
 const up = document.querySelector('.up');
 const down = document.querySelector('.down');
 
+// creo le funzioni dei 2 bottoni 
 down.addEventListener('click', function() {
   if(counter === images.length -1 ){
     itemSlider[counter].classList.remove('active');
@@ -63,13 +64,10 @@ down.addEventListener('click', function() {
     counter = counter + 1;
     itemSlider[counter].classList.add('active');
     itemThumb[counter].classList.add('active');
-    console.log(counter);
   }
-
- 
 })
 
-console.log(counter);
+
 
 up.addEventListener('click', function() {
   if(counter === 0 ){
@@ -84,10 +82,9 @@ up.addEventListener('click', function() {
     counter = counter - 1;
     itemSlider[counter].classList.add('active');
     itemThumb[counter].classList.add('active');
-    console.log(counter);
   }
-
 })
+
  
 
 
