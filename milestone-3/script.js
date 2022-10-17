@@ -51,23 +51,44 @@ const up = document.querySelector('.up');
 const down = document.querySelector('.down');
 
 down.addEventListener('click', function() {
-  itemSlider[counter].classList.remove('active')
-  itemThumb[counter].classList.remove('active')
-  counter = counter + 1;
-  itemSlider[counter].classList.add('active')
-  itemThumb[counter].classList.add('active')
+  if(counter === images.length -1 ){
+    itemSlider[counter].classList.remove('active');
+    itemThumb[counter].classList.remove('active');
+    counter = 0;
+    itemSlider[counter].classList.add('active');
+    itemThumb[counter].classList.add('active');
+  }else{
+    itemSlider[counter].classList.remove('active');
+    itemThumb[counter].classList.remove('active');
+    counter = counter + 1;
+    itemSlider[counter].classList.add('active');
+    itemThumb[counter].classList.add('active');
+    console.log(counter);
+  }
 
+ 
 })
 
+console.log(counter);
 
 up.addEventListener('click', function() {
-  itemSlider[counter].classList.remove('active')
-  itemThumb[counter].classList.remove('active')
-  counter = counter - 1;
-  itemSlider[counter].classList.add('active')
-  itemThumb[counter].classList.add('active')
-})
+  if(counter === 0 ){
+    itemSlider[counter].classList.remove('active');
+    itemThumb[counter].classList.remove('active');
+    counter = images.length - 1;
+    itemSlider[counter].classList.add('active');
+    itemThumb[counter].classList.add('active');
+  }else{
+    itemSlider[counter].classList.remove('active');
+    itemThumb[counter].classList.remove('active');
+    counter = counter - 1;
+    itemSlider[counter].classList.add('active');
+    itemThumb[counter].classList.add('active');
+    console.log(counter);
+  }
 
+})
+ 
 
 
 
