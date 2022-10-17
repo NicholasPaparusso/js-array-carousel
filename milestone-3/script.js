@@ -41,7 +41,32 @@ const itemThumb = document.getElementsByClassName('item-thumb');
 itemSlider[0].classList.add('active');
 itemThumb[0].classList.add('active');
 
+//Creo un counter esterno = 0
 
+counter = 0;
+
+// dichiaro i bottoni 
+
+const up = document.querySelector('.up');
+const down = document.querySelector('.down');
+
+down.addEventListener('click', function() {
+  itemSlider[counter].classList.remove('active')
+  itemThumb[counter].classList.remove('active')
+  counter = counter + 1;
+  itemSlider[counter].classList.add('active')
+  itemThumb[counter].classList.add('active')
+
+})
+
+
+up.addEventListener('click', function() {
+  itemSlider[counter].classList.remove('active')
+  itemThumb[counter].classList.remove('active')
+  counter = counter - 1;
+  itemSlider[counter].classList.add('active')
+  itemThumb[counter].classList.add('active')
+})
 
 
 

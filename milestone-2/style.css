@@ -30,13 +30,14 @@ main{
 }
 
 .item-slider{
-  opacity: 0;
+  display: none;
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .item-slider.active{
-  opacity: 1;
+  display: block;
 }
 
 .arrow{
@@ -50,7 +51,7 @@ main{
   line-height: 25px;
   transform: translate(-50% , 0 );
   color: #003049 ;
-
+  cursor: pointer;
 }
 
 .up{
