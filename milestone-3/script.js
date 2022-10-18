@@ -52,37 +52,26 @@ const down = document.querySelector('.down');
 
 // creo le funzioni dei 2 bottoni 
 down.addEventListener('click', function() {
-  if(counter === images.length -1 ){
+ 
     itemSlider[counter].classList.remove('active');
     itemThumb[counter].classList.remove('active');
-    counter = 0;
+    counter++;
+    if(counter === images.length){counter=0;}
     itemSlider[counter].classList.add('active');
     itemThumb[counter].classList.add('active');
-  }else{
-    itemSlider[counter].classList.remove('active');
-    itemThumb[counter].classList.remove('active');
-    counter = counter + 1;
-    itemSlider[counter].classList.add('active');
-    itemThumb[counter].classList.add('active');
-  }
 })
 
 
 
 up.addEventListener('click', function() {
-  if(counter === 0 ){
+
     itemSlider[counter].classList.remove('active');
     itemThumb[counter].classList.remove('active');
-    counter = images.length - 1;
+    counter--;
+    if(counter < 0){counter = images.length -1;}
     itemSlider[counter].classList.add('active');
     itemThumb[counter].classList.add('active');
-  }else{
-    itemSlider[counter].classList.remove('active');
-    itemThumb[counter].classList.remove('active');
-    counter = counter - 1;
-    itemSlider[counter].classList.add('active');
-    itemThumb[counter].classList.add('active');
-  }
+  
 })
 
  
